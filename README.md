@@ -68,7 +68,7 @@ Smart-Exam-Seating-System/
 ### Quick Setup
 📥 Clone the repository  
 ```bash
-git clone https://github.com/sharvani1357/Smart-Exam-Seating-System-for-Intercollege-Examinations.git
+git clone https://github.com/Khushibung05/collegeAdministration
 cd Smart-Exam-Seating-System-for-Intercollege-Examinations
 
 
@@ -116,5 +116,4 @@ Invigilator View → Invigilators check assigned duties
 Guided by Mrs. B. Sabitha (Assistant Professor, CVR College of Engineering)
 
 ⭐ If you found this project useful, please give it a star on GitHub!
-
 
