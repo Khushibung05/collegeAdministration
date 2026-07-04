@@ -19,6 +19,7 @@ public class DashboardHandler extends BaseHttpHandler {
                 <html>
                 <head>
                     <title>Dashboard - Exam Seating System</title>
+                    <meta charset="utf-8"/>
                     <style>
                         * { margin: 0; padding: 0; box-sizing: border-box; }
                         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; }
@@ -48,32 +49,32 @@ public class DashboardHandler extends BaseHttpHandler {
                             <div class="card">
                                 <h2>👥 Students</h2>
                                 <p>Manage student records and view allocations</p>
-                                <button class="btn btn-success" onclick="alert('Coming Soon!')">Manage Students</button>
+                                <a class="btn btn-success" href="/admin#students">Manage Students</a>
                             </div>
                             <div class="card">
                                 <h2>👨‍🏫 Invigilators</h2>
                                 <p>Add and manage invigilator assignments</p>
-                                <button class="btn btn-success" onclick="alert('Coming Soon!')">Manage Invigilators</button>
+                                <a class="btn btn-success" href="/admin#invigilators">Manage Invigilators</a>
                             </div>
                             <div class="card">
                                 <h2>🏛️ Halls</h2>
                                 <p>Configure examination halls and seating capacity</p>
-                                <button class="btn btn-success" onclick="alert('Coming Soon!')">Manage Halls</button>
+                                <a class="btn btn-success" href="/admin#halls">Manage Halls</a>
                             </div>
                             <div class="card">
                                 <h2>📅 Exam Sessions</h2>
                                 <p>Create and manage exam sessions</p>
-                                <button class="btn btn-success" onclick="alert('Coming Soon!')">Create Session</button>
+                                <a class="btn btn-success" href="/admin#sessions">Create Session</a>
                             </div>
                             <div class="card">
                                 <h2>🎲 Generate Allocations</h2>
                                 <p>Auto-generate seat allocations and invigilator duties</p>
-                                <button class="btn btn-warning" onclick="alert('Coming Soon!')">Generate Now</button>
+                                <a class="btn btn-warning" href="/admin#alloc">Generate Now</a>
                             </div>
                             <div class="card">
                                 <h2>📊 Reports</h2>
                                 <p>View allocation reports and statistics</p>
-                                <button class="btn" onclick="alert('Coming Soon!')">View Reports</button>
+                                <a class="btn" href="/admin#reports">View Reports</a>
                             </div>
                         </div>
                     </div>

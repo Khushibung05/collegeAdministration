@@ -1,8 +1,7 @@
 package com.collegeadmin;
 
 import com.collegeadmin.config.DatabaseConfig;
-import com.collegeadmin.http.AdminLoginHandler;
-import com.collegeadmin.http.DashboardHandler;
+import com.collegeadmin.http.*;
 import com.sun.net.httpserver.HttpServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,9 +10,6 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.sql.SQLException;
 
-/**
- * Main application entry point
- */
 public class ExamSeatingApp {
     private static final Logger logger = LoggerFactory.getLogger(ExamSeatingApp.class);
     private static final int PORT = 8083;
@@ -21,11 +17,11 @@ public class ExamSeatingApp {
 
     public static void main(String[] args) {
         try {
-            // Initialize database
+            // Initialize database (this invokes SchemaInitializer internally)
             logger.info("Initializing database...");
             DatabaseConfig.initialize();
 
-            // Start HTTP server
+            // Start HTTP server and register handlers
             logger.info("Starting HTTP server on port {}", PORT);
             startServer();
 
@@ -47,21 +43,29 @@ public class ExamSeatingApp {
     private static void startServer() throws IOException {
         server = HttpServer.create(new InetSocketAddress(PORT), 0);
 
-        // Routes
+        // Root -> redirect to /dashboard
         server.createContext("/", exchange -> {
             try {
-                exchange.sendResponseHeaders(302, 0);
-                exchange.getResponseHeaders().set("Location", "/login");
-                exchange.close();
+                exchange.getResponseHeaders().set("Location", "/dashboard");
+                exchange.sendResponseHeaders(302, -1);
             } catch (IOException e) {
                 logger.error("Error handling root path", e);
+            } finally {
+                exchange.close();
             }
         });
 
-        server.createContext("/login", new AdminLoginHandler());
+        // UI pages
         server.createContext("/dashboard", new DashboardHandler());
+        server.createContext("/admin", new AdminUIHandler()); // consolidated admin UI
+        // API endpoints
+        server.createContext("/api/students", new StudentsHandler());
+        server.createContext("/api/invigilators", new InvigilatorsHandler());
+        server.createContext("/api/halls", new HallsHandler());
+        server.createContext("/api/sessions", new SessionsHandler());
+        server.createContext("/api/allocations", new AllocationsHandler());
+        server.createContext("/api/reports", new ReportsHandler());
 
-        // Add more contexts as needed
         server.setExecutor(null);
         server.start();
     }
