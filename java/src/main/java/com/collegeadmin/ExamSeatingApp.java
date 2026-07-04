@@ -2,6 +2,7 @@ package com.collegeadmin;
 
 import com.collegeadmin.config.DatabaseConfig;
 import com.collegeadmin.http.AdminLoginHandler;
+import com.collegeadmin.http.DashboardHandler;
 import com.sun.net.httpserver.HttpServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,6 +59,7 @@ public class ExamSeatingApp {
         });
 
         server.createContext("/login", new AdminLoginHandler());
+        server.createContext("/dashboard", new DashboardHandler());
 
         // Add more contexts as needed
         server.setExecutor(null);

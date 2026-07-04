@@ -120,3 +120,33 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Default Admin Password: admin123
 2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - ========================================
 
+2026-07-04 23:08:00 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Initializing database...
+2026-07-04 23:08:00 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-04 23:08:00 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b7596b4
+2026-07-04 23:08:00 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-04 23:08:00 [com.collegeadmin.ExamSeatingApp.main()] INFO  c.collegeadmin.config.DatabaseConfig - Database connection pool initialized successfully
+2026-07-04 23:08:00 [com.collegeadmin.ExamSeatingApp.main()] INFO  c.collegeadmin.config.DatabaseConfig - Database schema initialized
+2026-07-04 23:08:00 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Starting HTTP server on port 8083
+2026-07-04 23:08:01 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - 
+========================================
+2026-07-04 23:08:01 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Exam Seating System - Java Edition
+2026-07-04 23:08:01 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Server running on http://localhost:8083
+2026-07-04 23:08:01 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Default Admin Password: admin123
+2026-07-04 23:08:01 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - ========================================
+
+2026-07-04 23:11:50 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Initializing database...
+2026-07-04 23:11:50 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-04 23:11:51 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1301c734
+2026-07-04 23:11:51 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-04 23:11:51 [com.collegeadmin.ExamSeatingApp.main()] INFO  c.collegeadmin.config.DatabaseConfig - Database connection pool initialized successfully
+2026-07-04 23:11:51 [com.collegeadmin.ExamSeatingApp.main()] INFO  c.collegeadmin.config.DatabaseConfig - Database schema initialized
+2026-07-04 23:11:51 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Starting HTTP server on port 8083
+2026-07-04 23:11:51 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - 
+========================================
+2026-07-04 23:11:51 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Exam Seating System - Java Edition
+2026-07-04 23:11:51 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Server running on http://localhost:8083
+2026-07-04 23:11:51 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Default Admin Password: admin123
+2026-07-04 23:11:51 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - ========================================
+
+2026-07-04 23:13:04 [HTTP-Dispatcher] INFO  c.collegeadmin.http.BaseHttpHandler - Admin login successful
+2026-07-04 23:16:15 [HTTP-Dispatcher] INFO  c.collegeadmin.http.BaseHttpHandler - Admin login successful
