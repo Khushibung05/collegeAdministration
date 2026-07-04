@@ -4,8 +4,6 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -20,7 +18,7 @@ public class DatabaseConfig {
     private static final String DB_PORT = "3306";
     private static final String DB_NAME = "exam_seating_system";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "";
+    private static final String DB_PASSWORD = "Smart_interview1";
 
     /**
      * Initialize database connection pool
@@ -43,10 +41,10 @@ public class DatabaseConfig {
             dataSource = new HikariDataSource(config);
             logger.info("Database connection pool initialized successfully");
             initializeSchema();
-        } catch (SQLException e) {
-            logger.error("Failed to initialize database connection pool", e);
-            throw e;
-        }
+        } catch (Exception e) {
+                logger.error("Failed to initialize database connection pool", e);
+                throw new SQLException("Failed to initialize database", e);
+            }
     }
 
     /**

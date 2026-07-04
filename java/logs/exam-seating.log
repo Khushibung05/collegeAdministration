@@ -1,0 +1,122 @@
+2026-07-04 21:49:05 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Initializing database...
+2026-07-04 21:49:22 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Initializing database...
+2026-07-04 22:17:00 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Initializing database...
+2026-07-04 22:17:00 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-04 22:17:03 [com.collegeadmin.ExamSeatingApp.main()] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:839)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:415)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at com.collegeadmin.config.DatabaseConfig.initialize(DatabaseConfig.java:41)
+	at com.collegeadmin.ExamSeatingApp.main(ExamSeatingApp.java:25)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-07-04 22:17:03 [com.collegeadmin.ExamSeatingApp.main()] ERROR c.collegeadmin.config.DatabaseConfig - Failed to initialize database connection pool
+com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Access denied for user 'root'@'localhost' (using password: NO)
+	at com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:596)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:582)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at com.collegeadmin.config.DatabaseConfig.initialize(DatabaseConfig.java:41)
+	at com.collegeadmin.ExamSeatingApp.main(ExamSeatingApp.java:25)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:839)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:415)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	... 6 common frames omitted
+2026-07-04 22:17:03 [com.collegeadmin.ExamSeatingApp.main()] ERROR com.collegeadmin.ExamSeatingApp - Database initialization failed
+java.sql.SQLException: Failed to initialize database
+	at com.collegeadmin.config.DatabaseConfig.initialize(DatabaseConfig.java:46)
+	at com.collegeadmin.ExamSeatingApp.main(ExamSeatingApp.java:25)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Access denied for user 'root'@'localhost' (using password: NO)
+	at com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:596)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:582)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at com.collegeadmin.config.DatabaseConfig.initialize(DatabaseConfig.java:41)
+	... 3 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:839)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:415)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	... 6 common frames omitted
+2026-07-04 22:19:59 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Initializing database...
+2026-07-04 22:19:59 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-04 22:19:59 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1301c734
+2026-07-04 22:19:59 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-04 22:19:59 [com.collegeadmin.ExamSeatingApp.main()] INFO  c.collegeadmin.config.DatabaseConfig - Database connection pool initialized successfully
+2026-07-04 22:20:01 [com.collegeadmin.ExamSeatingApp.main()] WARN  c.collegeadmin.config.DatabaseConfig - Schema already initialized or error occurred
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rows INT NOT NULL,
+    columns INT NOT NULL,
+    total_capacity INT GENERATED AL' at line 5
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at com.collegeadmin.config.DatabaseConfig.executeSql(DatabaseConfig.java:87)
+	at com.collegeadmin.config.DatabaseConfig.initializeSchema(DatabaseConfig.java:75)
+	at com.collegeadmin.config.DatabaseConfig.initialize(DatabaseConfig.java:43)
+	at com.collegeadmin.ExamSeatingApp.main(ExamSeatingApp.java:25)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:279)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-07-04 22:20:01 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Starting HTTP server on port 8083
+2026-07-04 22:28:08 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Initializing database...
+2026-07-04 22:28:08 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-04 22:28:09 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15a547d9
+2026-07-04 22:28:09 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-04 22:28:09 [com.collegeadmin.ExamSeatingApp.main()] INFO  c.collegeadmin.config.DatabaseConfig - Database connection pool initialized successfully
+2026-07-04 22:28:09 [com.collegeadmin.ExamSeatingApp.main()] INFO  c.collegeadmin.config.DatabaseConfig - Database schema initialized
+2026-07-04 22:28:09 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Starting HTTP server on port 8083
+2026-07-04 22:28:09 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - 
+========================================
+2026-07-04 22:28:09 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Exam Seating System - Java Edition
+2026-07-04 22:28:09 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Server running on http://localhost:8083
+2026-07-04 22:28:09 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Default Admin Password: admin123
+2026-07-04 22:28:09 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - ========================================
+
+2026-07-04 22:44:30 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Initializing database...
+2026-07-04 22:44:30 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15a547d9
+2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  c.collegeadmin.config.DatabaseConfig - Database connection pool initialized successfully
+2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  c.collegeadmin.config.DatabaseConfig - Database schema initialized
+2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Starting HTTP server on port 8083
+2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - 
+========================================
+2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Exam Seating System - Java Edition
+2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Server running on http://localhost:8083
+2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - Default Admin Password: admin123
+2026-07-04 22:44:31 [com.collegeadmin.ExamSeatingApp.main()] INFO  com.collegeadmin.ExamSeatingApp - ========================================
+

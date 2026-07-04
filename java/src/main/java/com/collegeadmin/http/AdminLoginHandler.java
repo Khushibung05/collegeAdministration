@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * HTTP handler for admin login
  */
-public class AdminLoginHandler extends HttpHandler {
+public class AdminLoginHandler extends BaseHttpHandler {
     private final AdminService adminService = new AdminService();
     private static final String LOGIN_SESSION_KEY = "admin_logged_in";
 

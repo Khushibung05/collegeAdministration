@@ -48,9 +48,9 @@ public class SchemaInitializer {
             CREATE TABLE IF NOT EXISTS halls (
                 id INT PRIMARY KEY AUTO_INCREMENT,
                 name VARCHAR(100) NOT NULL UNIQUE,
-                rows INT NOT NULL,
-                columns INT NOT NULL,
-                total_capacity INT GENERATED ALWAYS AS (rows * columns) STORED,
+                row_count INT NOT NULL,
+                column_count INT NOT NULL,
+                total_capacity INT GENERATED ALWAYS AS (row_count * column_count) STORED,
                 is_active BOOLEAN DEFAULT TRUE,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP

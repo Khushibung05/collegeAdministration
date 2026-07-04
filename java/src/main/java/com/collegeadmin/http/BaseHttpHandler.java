@@ -1,7 +1,6 @@
 package com.collegeadmin.http;
 
 import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,8 +12,8 @@ import java.util.Map;
 /**
  * Base HTTP handler for common operations
  */
-public abstract class HttpHandler implements HttpHandler {
-    protected static final Logger logger = LoggerFactory.getLogger(HttpHandler.class);
+public abstract class BaseHttpHandler implements com.sun.net.httpserver.HttpHandler{
+    protected static final Logger logger = LoggerFactory.getLogger(BaseHttpHandler.class);
 
     /**
      * Send JSON response
