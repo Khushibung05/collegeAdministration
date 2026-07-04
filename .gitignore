@@ -1,0 +1,131 @@
+# ==========================================
+# Java/Maven specific files
+# ==========================================
+target/
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# ==========================================
+# IDE specific files
+# ==========================================
+.idea/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+*.swp
+*.swo
+*~
+.vscode/
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# Build and Compilation
+# ==========================================
+build/
+dist/
+*.o
+*.so
+*.dll
+*.dylib
+
+# ==========================================
+# Runtime and Logs
+# ==========================================
+logs/
+*.log
+*.log.*
+.gradle/
+
+# ==========================================
+# Database and Configuration
+# ==========================================
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.local
+config.properties
+
+# ==========================================
+# Operating System files
+# ==========================================
+Thumbs.db
+.DS_Store
+ehthumbs.db
+
+# ==========================================
+# Python legacy files (NOT NEEDED - Java only)
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+pyvenv.cfg
+*.pyc
+.pytest_cache/
+
+# ==========================================
+# Node.js (if applicable)
+# ==========================================
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ==========================================
+# Temporary files
+# ==========================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+.~*
+
+# ==========================================
+# Test coverage
+# ==========================================
+coverage/
+.coverage
+htmlcov/
+*.gcda
+*.gcno
+
+# ==========================================
+# IDE generated files
+# ==========================================
+.factorypath
+.sts4-cache/
+.springBeans
+.tern-port
