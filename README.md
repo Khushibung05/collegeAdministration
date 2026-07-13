@@ -4,7 +4,7 @@
 
 ## 🌟 Overview
 
-This is a complete Java rewrite of the exam seating system, replacing the legacy Python implementation. The system automates **exam seating arrangements** and **invigilator duty allocation** with a clean, scalable architecture.
+The system automates **exam seating arrangements** and **invigilator duty allocation** with a clean, scalable architecture.
 
 **Features:**
 - ✅ Secure admin authentication
